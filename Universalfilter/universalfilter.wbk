@@ -1,0 +1,29 @@
+version 2
+2
+9
+.tran 1u 1m{return}.kicad adjustpaths{return}.save all{return}.probe alli
+1
+1
+V(tief)
+ 
+1
+.ac dec 10 1 1Meg{return}.kicad adjustpaths{return}.save all{return}.probe alli
+6
+9
+V(band)
+ 
+5
+V(band)
+ 
+9
+V(hoch)
+ 
+5
+V(hoch)
+ 
+9
+V(tief)
+ 
+5
+V(tief)
+ 

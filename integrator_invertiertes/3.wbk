@@ -1,0 +1,20 @@
+version 2
+2
+1
+.ac dec 10 1 1Meg{return}.kicad adjustpaths{return}.save all{return}.probe alli
+2
+9
+V(/Ua)
+ 
+5
+V(/Ua)
+ 
+9
+.tran 1u 1u 0{return}.kicad adjustpaths{return}.save all{return}.probe alli
+2
+1
+V(/Ua)
+ 
+1
+V(/Uein)
+ 

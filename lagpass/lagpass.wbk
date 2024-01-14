@@ -4,17 +4,17 @@ version 2
 .ac dec 10 1 1Meg{return}.kicad adjustpaths{return}.save all{return}.probe alli
 2
 9
-V(/Ua)
+V(U_aus)
  
 5
-V(/Ua)
+V(U_aus)
  
 9
-.tran 1u 1u 0{return}.kicad adjustpaths{return}.save all{return}.probe alli
+.tran 100u 6m{return}.kicad adjustpaths{return}.save all{return}.probe alli
 2
 1
-V(/Ua)
+V(U_aus)
  
 1
-V(/Uein)
+V(U_ein)
  

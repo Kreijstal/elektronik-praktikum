@@ -641,7 +641,7 @@
     (pin "2" (uuid c50c0891-4acc-43e3-9126-c78092b37a03))
     (pin "1" (uuid ff971652-b40c-4f81-a535-65d8ec67796c))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "V2") (unit 1)
         )
@@ -666,7 +666,7 @@
     )
     (pin "1" (uuid 423e5fab-fb73-4a20-b68d-fbbada6a34b8))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "#PWR03") (unit 1)
         )
@@ -680,7 +680,7 @@
     (property "Reference" "R1" (at 53.34 17.78 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "10k" (at 53.34 20.32 90)
+    (property "Value" "1meg" (at 53.34 20.32 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 53.34 25.908 90)
@@ -692,7 +692,7 @@
     (pin "2" (uuid d103e0d3-4030-49a4-a2c9-e2ed626cc660))
     (pin "1" (uuid a5fac6ce-2488-4951-a542-5481ffdfa56b))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "R1") (unit 1)
         )
@@ -727,7 +727,7 @@
     (pin "2" (uuid aad311b6-7f47-49f5-952a-e818f5713edc))
     (pin "1" (uuid 72290c95-1fa9-4dab-b990-6d8fd493df53))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "V1") (unit 1)
         )
@@ -753,7 +753,7 @@
     (pin "2" (uuid 1baef556-7191-4af3-8f29-8511ffc86858))
     (pin "1" (uuid 7482db6f-4d08-4a66-8e5a-e2d5a544c3b1))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "C1") (unit 1)
         )
@@ -797,7 +797,7 @@
     (pin "8" (uuid 4af78e3b-c301-4034-bb4a-f9e4278a45a6))
     (pin "7" (uuid 86a2f517-de06-400b-9888-a463ad573733))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "U1") (unit 3)
         )
@@ -841,7 +841,7 @@
     (pin "8" (uuid 4af78e3b-c301-4034-bb4a-f9e4278a45a7))
     (pin "7" (uuid 86a2f517-de06-400b-9888-a463ad573734))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "U1") (unit 1)
         )
@@ -866,7 +866,7 @@
     )
     (pin "1" (uuid 30dbd14b-1221-4321-8b39-98df422cbe2f))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "#PWR05") (unit 1)
         )
@@ -892,7 +892,7 @@
     (pin "2" (uuid b097846e-f81d-47d4-a785-57fc61dfd2a3))
     (pin "1" (uuid 22f2c4fa-1140-41bf-b6af-fe590be905f1))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "R2") (unit 1)
         )
@@ -917,7 +917,7 @@
     )
     (pin "1" (uuid 139727b0-27db-4eed-8c8f-b0789fff1be8))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "#PWR01") (unit 1)
         )
@@ -942,7 +942,7 @@
     )
     (pin "1" (uuid 3a34caca-e684-4f6e-93c2-34a3382457be))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "#PWR02") (unit 1)
         )
@@ -986,7 +986,7 @@
     (pin "8" (uuid 4af78e3b-c301-4034-bb4a-f9e4278a45a8))
     (pin "7" (uuid 86a2f517-de06-400b-9888-a463ad573735))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "U1") (unit 2)
         )
@@ -1011,7 +1011,7 @@
     )
     (pin "1" (uuid 81ecb59a-50f0-4a94-889b-f82fa33800f1))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "#PWR06") (unit 1)
         )
@@ -1049,7 +1049,7 @@
     (pin "1" (uuid 355521e9-cd74-4ba5-8e47-a4df6a10727b))
     (pin "2" (uuid d55e4e70-6b38-424a-aef6-89b4c6f95929))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "V3") (unit 1)
         )
@@ -1074,7 +1074,7 @@
     )
     (pin "1" (uuid 3864f366-7af5-4c59-a7e1-25b1db748aac))
     (instances
-      (project "TiefpassAktiv"
+      (project "3"
         (path "/b35302b3-1aa5-424e-90db-f5cc7fa728aa"
           (reference "#PWR04") (unit 1)
         )

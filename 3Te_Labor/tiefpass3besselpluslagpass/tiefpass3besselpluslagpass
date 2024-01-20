@@ -1,0 +1,25 @@
+*
+
+.subckt tiefpass3besselpluslagpass
+
+
+.include "C:/Users/R/Documents/KiCad/7.0/projects/tiefpass3besselpluslagpass/TL072-dual.lib"
+XU2 U_aus Net-_U2A--_ Net-_U2A-+_ -12V unconnected-_U2B-+-Pad5_ unconnected-_U2B---Pad6_ unconnected-_U2-Pad7_ +12V TL072c
+R8 Net-_U2A--_ U_aus 10k
+R7 GND Net-_U2A--_ 10k
+C4 Net-_U2A--_ U_aus 100n
+V2 GND -12V DC 12 
+V3 +12V GND DC 12 
+XU1 Net-_R3-Pad2_ Net-_U1A--_ Net-_U1A-+_ -12V GND Net-_U1B--_ Net-_U2A-+_ +12V TL072c
+R3 Net-_U1A--_ Net-_R3-Pad2_ 1.24k
+C1 Net-_U1A-+_ GND 100n
+R1 Net-_U1A-+_ U_ein 2.37k
+R2 GND Net-_U1A--_ 2.49k
+V1 U_ein GND DC 0 SIN( 0 1 1k 0 0 0 1 ) AC 1 
+R5 Net-_C2-Pad1_ Net-_U2A-+_ 1.37k
+R4 Net-_R3-Pad2_ Net-_C2-Pad1_ 909
+R6 Net-_C2-Pad1_ Net-_U1B--_ 715
+C3 Net-_U2A-+_ Net-_U1B--_ 100n
+C2 Net-_C2-Pad1_ GND 487n
+
+.ends

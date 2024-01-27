@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "NE555_test-rescue")(type "KiCad")(uri "${KIPRJMOD}/NE555_test-rescue.kicad_sym")(options "")(descr ""))
+)

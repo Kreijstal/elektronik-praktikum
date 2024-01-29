@@ -29,3 +29,4 @@ fp-info-cache
 *.DS_Store
 *.lck
 \#auto_saved_files\#
+.ipynb_checkpoints

@@ -617,10 +617,10 @@
     (uuid fe54fde4-89d8-4c76-b5cb-f8bf343eeeeb)
   )
 
-  (global_label "U_aus" (shape output) (at 120.015 72.39 270) (fields_autoplaced)
+  (global_label "U_a" (shape output) (at 120.015 72.39 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 227496d2-83f0-4e42-a7e7-d041b11bd967)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 120.015 80.9994 90)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 120.015 78.8223 90)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )

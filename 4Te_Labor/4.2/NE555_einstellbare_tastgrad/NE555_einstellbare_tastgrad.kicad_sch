@@ -926,7 +926,7 @@
     (property "Reference" "R2" (at 134.62 71.12 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "3k" (at 134.62 73.66 90)
+    (property "Value" "721" (at 134.62 73.66 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 134.62 79.248 90)

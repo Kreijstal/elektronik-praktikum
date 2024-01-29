@@ -235,6 +235,11 @@
     (uuid 9a599f80-ebd6-4a79-8e8a-cfe3dd9a5088)
   )
 
+  (text ".ac dec 10 1 1meg" (at 76.835 47.625 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid f375d2aa-313e-4c0c-ac5a-0e8cb130812e)
+  )
+
   (global_label "U_e" (shape input) (at 93.98 30.48 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid ac95130c-4489-466c-b8ce-bdd9c5a3357c)

@@ -1,0 +1,143 @@
+% https://www.overleaf.com/6861143743knghjhngpjyd#2cad23
+\section{Einleitung}
+
+
+
+Oszillatoren, als Grundbausteine elektronischer Schaltungen, sind essentiell für die Erzeugung periodischer Signale in der Elektronik. Das Ziel dieses Experiments liegt in der Untersuchung der Eigenschaften verschiedener Oszillatoren durch den Vergleich von experimentellen Daten mit Simulationswerten und theoretischen Überlegungen. Im Fokus stehen dabei der Entwurf eines Phasenschieberoszillators, einer astabilen Kippstufe mit dem NE555 und eines Dreieck-Rechteck-Oszillators. Durch die praktische Umsetzung und anschließende Charakterisierung dieser Schaltungen sollen grundlegende Erkenntnisse im Bereich elektronischer Designs gewonnen werden.
+
+%\subsubsection{Zielsetzung}\label{zielsetzung}
+
+%\begin{itemize}
+%\item
+%  Erforschung verschiedener Oszillatortypen: astabiler %Multivibrator,
+%  Ringoszillator, Pierce-Oszillator und NE555-Timer.
+%\item
+%  Verständnis der Konstruktions- und Funktionsprinzipien.
+%\item
+%  Analyse der erzeugten Signalformen und Frequenzen.
+%\end{itemize}
+
+%\subsubsection{Methodik}\label{methodik}
+
+%\begin{itemize}
+%\item
+%  Aufbau der Schaltungen auf einem Steckbrett.
+%\item
+%  Messungen mit Oszilloskop und Multimeter.
+%\item
+%  Vergleich der experimentellen Daten mit theoretischen Werten.
+%\end{itemize}
+
+%Was brauchen wir?
+%Fritzing Aufgaben 6 Fritzing Schaltungen
+% 4.1. (2mal Fritzing)
+% 4.2.  (3 mal Fritzing)
+%4.3   (1 mal Fritzing
+
+% Schematic  6 mal analog zu Fritzing
+
+% Simulation
+% 1. Hochpass passiv (%3 mal \SI{680}{\ohm} Widerstände
+%3 mal \SI{100}{\nano\farad} Kondensatoren), Bodediagramm simulieren
+
+%2.
+
+
+\section{Theorie}
+
+In diesem Abschnitt wird auf einige Themen eingegangen, deren Verständnis eine wesentliche Rolle für die Dimensionierung und die Untersuchung der verwendeten Oszillatorschaltungen spielt
+
+\subsection{Übertragungsfunktion}
+%
+Die Übertragungsfunktion beschreibt die Beziehung zwischen dem Ausgangssignal und dem Eingangssignal eines linearen Systems.\\
+%
+Man kann mithilfe der untenstehenden Formel \ref{eq:Übertragung}, aus einer Übertragungsfunktion die Amplitudenverstärkung und die Phasenverschiebung ermitteln:
+
+\begin{equation}
+\label{eq:Übertragung}
+H(j\omega) = \underbrace{|H(j\omega)|}_{\text{Amplitudenverstärkung}} \cdot e^{j \overbrace{\angle H(j\omega)}^{\text{Phasenverschiebung}}}
+\end{equation}
+
+
+\subsection{Invertierender Verstärker}
+%
+Der invertierende Verstärker ist eine Grundschaltung, die mit einem Operationsverstärker realisert werden kann. 
+
+
+  \begin{figure}[H]
+  \centering
+\begin{circuitikz}[european]
+    \ctikzset{bipoles/length=1cm}
+    
+    \draw
+    (0,0) node[op amp] (opamp) {};
+    
+    \draw (opamp.-) to[R, european resistor, l=$R_2$] (-2.5, 0.35) -- (-3, 0.35) node[ocirc]{};
+    
+    \draw [-latex] ([yshift=-2mm] -3,0.35)--(-3,-1.35) node[midway,left] {$U_e$} ; 
+   
+ % Zeichne C   
+    \draw (opamp.-) to[short,*-] ++(0,1.25) coordinate (leftD) 
+    to[R, l=$R_1$] (leftD -| opamp.out)  ;
+
+    \draw [-latex] ([yshift=-2mm] 2,0)--(2,-1.35) node[midway,left] {$U_a$}; 
+    
+    \draw (2,-1.45) node[ocirc]{} to(2,-1.5) node[ground]{};
+    \draw (-3,-1.45)node[ocirc]{}to(-3,-1.5) node[ground]{};
+
+   \draw (opamp.out)--(2,0) node[ocirc]{};
+ 
+   \draw (leftD -| opamp.out) --(1.5,1.55)  to[short,-*] (1.5,0);
+
+    \draw (opamp.+) -- (-1,-0.35) to (-1,-1.5) node[ground]{};
+  
+\end{circuitikz}
+\end{figure}
+
+
+Die Verstärkung durch einen invertierenden Verstärkers lässt sich aus dem Verhältnis der Werten der Widerstände berechnen:
+
+
+\begin{equation}
+    U_a=- U_e \cdot \frac{R_1}{R_2}
+\end{equation}
+
+
+
+Daraus folgt die Übertragungsfunktion:
+
+
+\begin{equation}
+   H=\frac{U_a}{U_e}=-\frac{R_1}{R_2}
+\end{equation}
+
+so gilt:
+
+
+\begin{equation}
+\label{eq:invertierender_Verstärker_180_degree}
+   H(j\omega) = \frac{R_1}{R_2} \cdot e^{j180^\circ}
+\end{equation}
+
+
+An der Formel \ref{eq:Übertragung} lässt sich erkennen, dass die Amplitudenverstärkung dass die Phasenverschiebung für einen invertierenden Verstärkung unabhängig von der Dimensionierung der Widerstände immer \SI{180}{\degree} beträgt. Durch die Formel wird es ebenfalls klar, dass die Amplitudenverstärkung unabhängig von der Frequenz des Eingangssignals nur von dem Verhältnis der Widerstände $R_1$ und $R_2$ abhängt.
+
+\subsection{Hochpass 3.Ordnung}
+\label{subsec:Hochpass_3}
+Ein passives Hochpassfilter, bestehend aus einer Kombination passiver Bauteile wie Kondensatoren, Widerstände und Spulen, dämpft die Eingangssignale umso stärker, je niedriger die Frequenzen sind.\\
+%
+Die Übertragungsfunktion eines passiven RC-Hochpassfilters dritter Ordnung durch numerische Berechnungen mithilfe Pythons für $C_1=C_2=C_3$ und $R_1=R_2=R_3$ hat die folgende Form:
+\begin{equation}
+H(s)= \frac{C^3R^3s^3}{C^3R^3s^3 +  6R^2 C^2 s^2+ 5CRs + 1} 
+\end{equation}
+
+
+
+
+
+
+
+%circuitkz schaltungen korrigeren, nue restellen ür invertierenden rverstärker
+%Durchführeugnen schreiben
+%Formel im Labor auf Overleaf Schreiben
+%Werte

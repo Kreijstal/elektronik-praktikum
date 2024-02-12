@@ -1,0 +1,30 @@
+*****************************************************************
+* ngspice MODEL OF THE NPN BIPOLAR TRANSISTOR BC337 
+*****************************************************************
+.SUBCKT BC337/SIE B C E
+* Internal connections are made assuming:
+* B (Base) is terminal 1
+* C (Collector) is terminal 2
+* E (Emitter) is terminal 3
+Q    Q_Collector Q_Base Q_Emitter BC337 1.000
+LC   C Q_Collector 0.350N
+L1   B Q_Base1 0.400N
+LB   Q_Base1 Q_Base 0.500N
+L2   E Q_Emitter1 0.400N
+LE   Q_Emitter1 Q_Emitter 0.600N
+CGBC Q_Base1 Q_Collector 70.00F
+CGBE Q_Base1 Q_Emitter1 0.150P
+CGCE Q_Collector Q_Emitter1 15.00F
+.ENDS
+.MODEL BC337 NPN (IS=0.180P NF=1.000 BF=449.302 VAF=95.000 IKF=0.820
++ ISE=8.480F NE=1.566 NR=1.005 BR=16.919 VAR=13.000 IKR=0.663
++ ISC=0.102P NC=1.764
++ RB=0.750 IRB=0.100M RBM=0.375
++ RE=0.170 RC=0.289
++ CJE=63.400P VJE=0.850 MJE=0.372 FC=0.750
++ CJC=16.600P VJC=0.780 MJC=0.433 XCJC=0.650
++ TF=0.810N TR=2.600N PTF=1.000
++ XTF=4.300 VTF=1.500 ITF=0.450
++ XTB=1.500 EG=1.110 XTI=4.800
++ KF=5.000F AF=1.000)
+

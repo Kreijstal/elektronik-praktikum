@@ -1733,7 +1733,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "logic.lib"
+		(property "Sim.Library" "4081.dual.lib"
 			(at 346.71 99.06 0)
 			(effects
 				(font
@@ -1742,7 +1742,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Name" "T_NAND"
+		(property "Sim.Name" "4081B"
 			(at 346.71 99.06 0)
 			(effects
 				(font
@@ -1760,7 +1760,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" "1=A 2=B 3=out 4=VCC 5=VSS"
+		(property "Sim.Pins" "1=A1 2=B1 3=Y1 4=Y2 5=A2 6=B2 7=VSS 8=A3 9=B3 10=Y3 11=Y4 12=A4 13=B4 14=VDD"
 			(at 346.71 99.06 0)
 			(effects
 				(font
@@ -1816,6 +1816,72 @@
 				(path "/e7dc5981-dedb-439b-b819-e1c0f358cf49"
 					(reference "U1")
 					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 52.07 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "47420eb6-07bf-4479-a6aa-e6f620b66dd3")
+		(property "Reference" "#PWR06"
+			(at 52.07 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 52.07 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "61b54ffd-d8db-4006-8319-887993ec4891")
+		)
+		(instances
+			(project "test"
+				(path "/e7dc5981-dedb-439b-b819-e1c0f358cf49"
+					(reference "#PWR06")
+					(unit 1)
 				)
 			)
 		)
@@ -1939,7 +2005,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "logic.lib"
+		(property "Sim.Library" "4081.dual.lib"
 			(at 66.04 58.42 0)
 			(effects
 				(font
@@ -1948,7 +2014,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Name" "T_NAND"
+		(property "Sim.Name" "4081B"
 			(at 66.04 58.42 0)
 			(effects
 				(font
@@ -1966,7 +2032,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" "1=A 2=B 3=out 4=VCC 5=VSS"
+		(property "Sim.Pins" "1=A1 2=B1 3=Y1 4=Y2 5=A2 6=B2 7=VSS 8=A3 9=B3 10=Y3 11=Y4 12=A4 13=B4 14=VDD"
 			(at 66.04 58.42 0)
 			(effects
 				(font
@@ -2093,72 +2159,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 52.07 66.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5c59b8be-e3c9-4233-8a2b-75d8cd5fcd23")
-		(property "Reference" "#PWR06"
-			(at 52.07 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 52.07 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 52.07 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 52.07 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 52.07 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "313c1c09-cbf8-43dd-b7dd-c849a41980c4")
-		)
-		(instances
-			(project "test"
-				(path "/e7dc5981-dedb-439b-b819-e1c0f358cf49"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "4xxx:4081")
 		(at 328.93 91.44 0)
 		(unit 3)
@@ -2211,7 +2211,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "logic.lib"
+		(property "Sim.Library" "4081.dual.lib"
 			(at 328.93 91.44 0)
 			(effects
 				(font
@@ -2220,7 +2220,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Name" "T_NAND"
+		(property "Sim.Name" "4081B"
 			(at 328.93 91.44 0)
 			(effects
 				(font
@@ -2238,7 +2238,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" "1=A 2=B 3=out 4=VCC 5=VSS"
+		(property "Sim.Pins" "1=A1 2=B1 3=Y1 4=Y2 5=A2 6=B2 7=VSS 8=A3 9=B3 10=Y3 11=Y4 12=A4 13=B4 14=VDD"
 			(at 328.93 91.44 0)
 			(effects
 				(font
@@ -2651,7 +2651,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "logic.lib"
+		(property "Sim.Library" "4081.dual.lib"
 			(at 101.6 68.58 0)
 			(effects
 				(font
@@ -2660,7 +2660,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Name" "T_NAND"
+		(property "Sim.Name" "4081B"
 			(at 101.6 68.58 0)
 			(effects
 				(font
@@ -2678,7 +2678,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" "1=A 2=B 3=out 4=VCC 5=VSS"
+		(property "Sim.Pins" "1=A1 2=B1 3=Y1 4=Y2 5=A2 6=B2 7=VSS 8=A3 9=B3 10=Y3 11=Y4 12=A4 13=B4 14=VDD"
 			(at 101.6 68.58 0)
 			(effects
 				(font
@@ -2857,7 +2857,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "logic.lib"
+		(property "Sim.Library" "4081.dual.lib"
 			(at 321.31 81.28 0)
 			(effects
 				(font
@@ -2866,7 +2866,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Name" "T_NAND"
+		(property "Sim.Name" "4081B"
 			(at 321.31 81.28 0)
 			(effects
 				(font
@@ -2884,7 +2884,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" "1=A 2=B 3=out 4=VCC 5=VSS"
+		(property "Sim.Pins" "1=A1 2=B1 3=Y1 4=Y2 5=A2 6=B2 7=VSS 8=A3 9=B3 10=Y3 11=Y4 12=A4 13=B4 14=VDD"
 			(at 321.31 81.28 0)
 			(effects
 				(font

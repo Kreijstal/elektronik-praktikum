@@ -1,0 +1,7 @@
+.subckt 4013B Q1 Q1N CLOCK1 RESET1 D1 SET1 VSS SET2 D2 RESET2 CLOCK2 Q2N Q2 VDD
+* Include the CD4013B model from the library
+.include CD4000_v.lib
+XU1 D1 CLOCK1 RESET1 SET1 Q1 Q1N VDD VSS vdd1={5} speed1={standard} CD4013B
+XU2 D2 CLOCK2 RESET2 SET2 Q2 Q2N VDD VSS vdd1={5} speed1={standard} CD4013B
+.ends MyCD4013B
+

@@ -1,0 +1,36 @@
+*
+*
+* ----------------------------------------------------------- CD4081B----
+*
+*  Quad 2-Input AND Gate
+*
+*  The CMOS Logic Data Book, 1991, Motorola Pages 6-5 to 6-14
+*  jds    6/6/94
+*  This part is shown in the data book as MC14081B
+*
+
+
+
+.SUBCKT CD4081B IN1A IN2A OUTA
++  optional: VDD=$G_CD4000_VDD VSS=$G_CD4000_VSS
++  params: MNTYMXDLY=0 IO_LEVEL=0
+*
+Uf0 and(2) VDD VSS
++   IN1A IN2A OUTA
++   DLY_MOD IO_4000B MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.model DLY_MOD ugate (TPLHMN=-1 TPLHTY=160ns TPLHMX=300ns
++                     TPHLMN=-1 TPHLTY=160ns TPHLMX=300ns)
+
+.include 
+.ENDS CD4081B
+.subckt CD4081Bm A1 B1 Y1 Y2 A2 B2 VSS A3 B3 Y3 Y4 A4 B4 VDD
+* Instances for each of the four AND gates in the CD4081B
+*IN1A IN2A OUTA
+XAND1 A1 B1 Y1 CD4081B
+XAND2 A2 B2 Y2 CD4081B
+XAND3 A3 B3 Y3 CD4081B
+XAND4 A4 B4 Y4 CD4081B
+.ends CD4081Bm
+
+

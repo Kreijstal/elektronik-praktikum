@@ -1,0 +1,73 @@
+*
+*
+* ----------------------------------------------------------- CD4013B----
+*
+*  Dual Type D Flip-Flop
+*
+*  The CMOS Logic Data Book, 1991, Motorola Pages 6-33 to 6-36
+*  jds    6/6/94
+*
+*
+* ----------------------------------------------------------- CD4013B----
+*
+*  Dual Type D Flip-Flop
+*
+*  The CMOS Logic Data Book, 1991, Motorola Pages 6-33 to 6-36
+*  jds    6/6/94
+*  This part is shown in the data book as MC14013B
+*
+.SUBCKT CD4013B SA RA CA DA QA QABAR
++  optional: VDD=$G_CD4000_VDD VSS=$G_CD4000_VSS
++  params: MNTYMXDLY=0 IO_LEVEL=0
+*
+Uf0 inva(2) VDD VSS
++   SA RA prebar clrbar
++   D0_GATE IO_4000B MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+Uf1 dff(1) VDD VSS
++   prebar clrbar CA DA Q_A Q_ABAR
++   DFF4013B IO_4000B MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+
+.MODEL DFF4013B UEFF(TWPCLMN=250NS TWPCLTY=125NS TWPCLMX=-1
++                    TWCLKLMN=250NS TWCLKLTY=125NS TWCLKLMX=-1
++                    TWCLKHMN=250NS TWCLKHTY=125NS TWCLKHMX=-1
++                    TSUDCLKMN=-1NS TSUDCLKTY=250NS TSUDCLKMX=-1
++                    THDCLKMN=40NS THDCLKTY=20NS THDCLKMX=-1)
+
+U3 PINDLY(2,0,3) VDD VSS
++ Q_A Q_ABAR
++ CA SA RA
++ QA QABAR
++ IO_4000B MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++ BOOLEAN:
++          EDGE = {CHANGED_LH(CA,0)}
++          SET = {CHANGED_LH(SA,0)}
++          CLEAR = {CHANGED_LH(RA,0)}
++ PINDLY:
++          QA QABAR = {
++            CASE(
++               SET, DELAY(-1,175NS,350NS),
++               CLEAR, DELAY(-1,225NS,450NS),
++               EDGE & (TRN_LH | TRN_HL), DELAY(-1,175NS,350NS),
++               DELAY(-1,226NS,451NS))}
+  
+U4 CONSTRAINT(3) VDD VSS
++ CA SA RA
++ IO_4000B IO_LEVEL={IO_LEVEL}
++ FREQ:
++        NODE = CA
++        MAXFREQ = 2MEG
++ SETUP_HOLD:
++             CLOCK LH = CA
++             DATA(2) = SA RA
++             SETUPTIME_LO = 80NS
++             HOLDTIME_LO = 50NS
+
+.ENDS CD4013B
+
+.subckt CD4013Bm. Q1 Q1N CLOCK1 RESET1 D1 SET1 VSS SET2 D2 RESET2 CLOCK2 Q2N Q2 VDD
+* Include the CD4013B model from the library
+XU1 SET1 RESET1 CLOCK1 D1 Q1 Q1N CD4013B
+XU2 SET2 RESET2 CLOCK2 D2 Q2 Q2N CD4013B
+.ends CD4013Bm
+

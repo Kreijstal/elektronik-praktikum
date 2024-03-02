@@ -232,7 +232,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "dsetreset8.kicad_pro",
+    "filename": "perfection.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -370,7 +370,7 @@
         "version": 0
       },
       "model_mode": 4,
-      "workbook_filename": ""
+      "workbook_filename": "perfection.wbk"
     },
     "page_layout_descr_file": "",
     "plot_directory": "",

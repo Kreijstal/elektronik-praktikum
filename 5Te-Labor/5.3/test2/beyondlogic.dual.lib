@@ -7,6 +7,35 @@ XAND3 A3 B3 Y3 VDD VSS T_AND
 XAND4 A4 B4 Y4 VDD VSS T_AND
 .ends 4081B
 
+* Simple generic model for a single-pole OpAmp
+* Parameters are pole frequency, gain, offset, output resistance.
+* The output is limited to the supply voltage.
+* Author Holger Vogt, Public Domain
+.subckt kicad_builtin_opamp in+ in- vcc vee out params: POLE=20 GAIN=20k VOFF=10m ROUT=10
+* add offset voltage
+  Voff in+ inoff dc {VOFF}
+* gain stage with RC pole
+  G10 0 int inoff in- 100u
+  R1 int 0 {GAIN/100u}
+  C1 int 0 {1/(6.28*(GAIN/100u)*POLE)}
+* output decoupling, output resistance
+  Eout 2 0 int 0 1
+  Rout 2 out {ROUT}
+* output limited to vee, vcc
+  Elow lee 0 vee 0 1
+  Ehigh lcc 0 vcc 0 1
+  Dlow lee int Dlimit
+  Dhigh int lcc Dlimit
+  .model Dlimit D N=0.01
+*
+.ends
+
+.subckt comphalf opampin opampout VCC VSS
+* always 1/2
+R2 inner1 VSS 10k
+R1 VCC inner1 10k
+XU6 opampin inner1 VCC VSS opampout kicad_builtin_opamp POLE=10000 %it has to be fast fast
+.ends comphalf
 
 .subckt nand3x3 A1 B1 A2 B2 C2 Y2 VSS C1 Y1 Y3 A3 B3 C3 VDD
 XNAND3_1 A1 B1 C1 Y1 VDD VSS T_NAND3
@@ -14,15 +43,14 @@ XNAND3_2 A2 B2 C2 Y2 VDD VSS T_NAND3
 XNAND3_3 A3 B3 C3 Y3 VDD VSS T_NAND3
 .ends nand3x3
 
-.subckt D_flip_flop_setbar_resetbar resetbar setbar data clock q qbar VDD GND
-XU2 conn1 clock conn2 clock conn3 conn4 GND reset conn2 conn3 conn4 data reset set nand3x3
-XU1 set conn2 out conn4 reset out2 GND out2 out conn1 set conn3 conn2 set nand3x3
+.subckt D_flip_flop_setbar_resetbar resetbar setbar data clock q qbar VDD VSS
+XU2 conn1 clock conn2 clock conn3 conn4 VSS resetbar conn2 conn3 conn4 data resetbar VDD nand3x3
+XU1 setbar conn2 q conn4 resetbar qbar VSS qbar q conn1 setbar conn3 conn2 VDD nand3x3
 .ends D_flip_flop_setbar_resetbar
 
 * D Flip-Flop with Set and Reset flipped using NOT gates
 .subckt D_flip_flop_set_reset set reset data clock q qbar VDD VSS
 
-* Inverting set and reset inputs
 XNOT_set set set_inverted VDD VSS T_NOT
 XNOT_reset reset reset_inverted VDD VSS T_NOT
 XDF_flip_flop set_inverted reset_inverted data clock q qbar VDD VSS D_flip_flop_setbar_resetbar
@@ -31,12 +59,11 @@ XDF_flip_flop set_inverted reset_inverted data clock q qbar VDD VSS D_flip_flop_
 
 .subckt CD4013Bm Q1 Q1N CLOCK1 RESET1 D1 SET1 VSS SET2 D2 RESET2 CLOCK2 Q2N Q2 VDD
 
-* First D flip-flop instance
-XDFF1 SET1 RESET1 D1 CLOCK1 Q1 Q1N VDD VSS D_flip_flop_set_reset
-
-* Second D flip-flop instance
-XDFF2 SET2 RESET2 D2 CLOCK2 Q2 Q2N VDD VSS D_flip_flop_set_reset
-
+XDFF1 RESET1 SET1 D1 CLOCK1 _Q1 _Q1N VDD VSS D_flip_flop_set_reset
+XDFF2 RESET2 SET2 D2 CLOCK2 _Q2 _Q2N VDD VSS D_flip_flop_set_reset
+XCOMP1 _Q1 Q1 VDD VSS comphalf
+XCOMP2 _Q1N Q1N VDD VSS comphalf
+XCOMP3 _Q2 Q2 VDD VSS comphalf
+XCOMP4 _Q2N Q2N VDD VSS comphalf
 .ends CD4013Bm
-
 

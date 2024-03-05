@@ -254,7 +254,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "pifilter.kicad_pro",
+    "filename": "dreiecksrechteck-vco.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -387,14 +387,16 @@
     "net_format_name": "",
     "ngspice": {
       "fix_include_paths": true,
+      "fix_passive_vals": false,
       "meta": {
         "version": 0
       },
-      "model_mode": 0,
-      "workbook_filename": "pifilter.wbk"
+      "model_mode": 4,
+      "workbook_filename": "dreiecksrechteck-vco.wbk"
     },
     "page_layout_descr_file": "",
     "plot_directory": "",
+    "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -406,8 +408,8 @@
   },
   "sheets": [
     [
-      "a0d6be7d-dc17-4140-af3a-dd06a84ffc83",
-      ""
+      "2bfb4d56-aacb-4507-b57e-dbc901fa3ede",
+      "Root"
     ]
   ],
   "text_variables": {}

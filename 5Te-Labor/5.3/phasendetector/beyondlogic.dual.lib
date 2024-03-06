@@ -34,7 +34,7 @@ XAND4 A4 B4 Y4 VDD VSS T_AND
 * always 1/2
 R2 inner1 VSS 10k
 R1 VCC inner1 10k
-XU6 opampin inner1 VCC VSS opampout kicad_builtin_opamp POLE=10000 %it has to be fast fast
+XU6 opampin inner1 VCC VSS opampout kicad_builtin_opamp POLE=100 %it has to be fast fast
 .ends comphalf
 
 .subckt nand3x3 A1 B1 A2 B2 C2 Y2 VSS C1 Y1 Y3 A3 B3 C3 VDD

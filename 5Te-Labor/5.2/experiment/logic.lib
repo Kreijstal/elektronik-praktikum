@@ -1,0 +1,91 @@
+* will this work
+
+.subckt T_NOT in out VCC VSS
+.model __Q1 NMOS
+.model __Q2 PMOS
+
+MQ1 out in VSS NC-Q1-0 __Q1  ; NMOS
+MQ2 out in VCC NC-Q2-0 __Q2  ; PMOS
+
+.ends T_NOT
+
+* NAND Gate Implementation
+.subckt T_NAND A B out VCC VSS
+.model __Q7 PMOS
+.model __Q8 PMOS
+.model __Q9 NMOS
+.model __Q10 NMOS
+
+* PMOS transistors
+MQ7 out A VCC NC-Q7-0 __Q7  ; PMOS
+MQ8 out B VCC NC-Q8-0 __Q8  ; PMOS
+
+* NMOS transistors
+MQ9 nand_internal B VSS NC-Q9-0 __Q9  ; NMOS
+MQ10 out A nand_internal NC-Q10-0 __Q10  ; NMOS
+
+.ends T_NAND
+
+* AND Gate Implementation using NAND followed by NOT
+.subckt T_AND A B out VCC VSS
+
+XNAND A B nand_out VCC VSS T_NAND  ; Instantiate NAND
+XNOT nand_out out VCC VSS T_NOT    ; Instantiate NOT to invert the output of NAND for AND logic
+
+.ends T_AND
+
+
+* NOR Gate
+.subckt T_NOR A B out VCC VSS
+.model __Q7 PMOS
+.model __Q8 PMOS
+.model __Q9 NMOS
+.model __Q10 NMOS
+
+* PMOS transistors - connected in series for T_NOR operation
+MQ7 nand_internal A VCC NC-Q7-0 __Q7  ; PMOS
+MQ8 out nand_internal B NC-Q8-0 __Q8  ; PMOS
+
+* NMOS transistors - connected in parallel for T_NOR operation
+MQ9 out A VSS NC-Q9-0 __Q9  ; NMOS
+MQ10 out B VSS NC-Q10-0 __Q10  ; NMOS
+
+.ends T_NOR
+
+
+* OR Gate Implementation using NOR followed by NOT
+.subckt T_OR A B out VCC VSS
+
+XNOR A B nor_out VCC VSS T_NOR  ; Instantiate NOR gate
+XNOT nor_out out VCC VSS T_NOT  ; Instantiate NOT gate to invert the output of NOR for OR logic
+
+.ends T_OR
+
+* 3-input NAND Gate Implementation
+.subckt T_NAND3 A B C out VCC VSS
+.model __Q11 PMOS
+.model __Q12 NMOS
+
+* PMOS transistors - connected in parallel for T_NAND3 operation
+MQ11 out A VCC NC-Q11-0 __Q11  ; PMOS for input A
+MQ12 out B VCC NC-Q12-0 __Q11  ; PMOS for input B
+MQ13 out C VCC NC-Q13-0 __Q11  ; PMOS for input C, added for 3-input NAND
+
+* NMOS transistors - connected in series for T_NAND3 operation
+MQ14 nand_internal1 B VSS NC-Q14-0 __Q12  ; NMOS for input B
+MQ15 nand_internal2 A nand_internal1 NC-Q15-0 __Q12  ; NMOS for input A
+MQ16 out C nand_internal2 NC-Q16-0 __Q12  ; NMOS for input C, added for 3-input NAND
+
+.ends T_NAND3
+
+
+
+.subckt T_TG in out ctl ctlb VDD VSS
+.model T_MPMOS PMOS
+.model T_MNMOS NMOS
+M1 out in ctl VSS T_MNMOS ; NMOS part of the TG, controlled by ctl
+M2 out in ctlb VDD T_MPMOS ; PMOS part of the TG, controlled by ctlb
+.ends T_TG
+
+
+

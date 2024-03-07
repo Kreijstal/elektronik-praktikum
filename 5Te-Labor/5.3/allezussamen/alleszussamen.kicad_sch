@@ -2242,151 +2242,6 @@
 				)
 			)
 		)
-		(symbol "Diode:1N5819"
-			(pin_numbers hide)
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "1N5819"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-				(at 0 -4.445 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "40V 1A Schottky Barrier Rectifier Diode, DO-41"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode Schottky"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "D*DO?41*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "1N5819_0_1"
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "1N5819_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Simulation_SPICE:VDC"
 			(pin_numbers hide)
 			(pin_names
@@ -3587,12 +3442,6 @@
 		)
 	)
 	(junction
-		(at 205.74 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "08b717bf-83dc-4ecd-b798-b7820cf61844")
-	)
-	(junction
 		(at 317.5 201.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3641,18 +3490,6 @@
 		(uuid "4dec081c-a0fd-44c8-a4f3-b97cf3bd4b1a")
 	)
 	(junction
-		(at 25.4 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "54811b82-7fe9-4a66-9d84-081a1009fc65")
-	)
-	(junction
-		(at 24.13 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "59c9df12-b105-4a77-833d-7417edd9563e")
-	)
-	(junction
 		(at 38.1 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3695,12 +3532,6 @@
 		(uuid "7a9d4f96-3c48-4822-86fb-7fe07305b14c")
 	)
 	(junction
-		(at 205.74 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "80bdd1cf-a763-48d9-b1fd-775a01a1fdf5")
-	)
-	(junction
 		(at 167.64 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3731,12 +3562,6 @@
 		(uuid "9ccc6f69-0825-4f4a-a233-b00f4667747a")
 	)
 	(junction
-		(at 205.74 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a1eca91c-815f-45ce-b462-861a3d2fec02")
-	)
-	(junction
 		(at 332.74 176.53)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3759,12 +3584,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ab95f2b0-412e-42f9-9013-3d88a0c8cb0c")
-	)
-	(junction
-		(at 16.51 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b07c343f-e85b-4b2d-b4c1-2f6195ce4e8b")
 	)
 	(junction
 		(at 121.92 139.7)
@@ -3825,16 +3644,6 @@
 			(type default)
 		)
 		(uuid "02252ba9-93b8-4ac5-9261-9d1ddf4110c6")
-	)
-	(wire
-		(pts
-			(xy 205.74 76.2) (xy 205.74 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "02ceb1ed-fd6f-4183-82ed-87e18d2eddc9")
 	)
 	(wire
 		(pts
@@ -3998,16 +3807,6 @@
 	)
 	(wire
 		(pts
-			(xy 8.89 88.9) (xy 8.89 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d83ebd3-de92-4cef-9293-0e03d54c3559")
-	)
-	(wire
-		(pts
 			(xy 78.74 124.46) (xy 78.74 137.16)
 		)
 		(stroke
@@ -4085,16 +3884,6 @@
 			(type default)
 		)
 		(uuid "2e366e64-bf68-404e-87bb-e9d6bf2e15ce")
-	)
-	(wire
-		(pts
-			(xy 205.74 76.2) (xy 220.98 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2fc99ed4-f38c-4f39-9f88-612350349b9f")
 	)
 	(wire
 		(pts
@@ -4188,16 +3977,6 @@
 	)
 	(wire
 		(pts
-			(xy 8.89 100.33) (xy 16.51 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d86e189-d1ba-4fa9-8f0e-0697a475df1b")
-	)
-	(wire
-		(pts
 			(xy 332.74 166.37) (xy 332.74 176.53)
 		)
 		(stroke
@@ -4205,16 +3984,6 @@
 			(type default)
 		)
 		(uuid "3e5de983-cc6c-4868-8404-0f20cce25bd5")
-	)
-	(wire
-		(pts
-			(xy 205.74 132.08) (xy 205.74 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "41a86376-ccdd-4362-b39f-e67066dae16b")
 	)
 	(wire
 		(pts
@@ -4398,16 +4167,6 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 97.79) (xy 198.12 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "676289e3-f18a-4a16-9abb-03cbc598688f")
-	)
-	(wire
-		(pts
 			(xy 34.29 39.37) (xy 34.29 27.94)
 		)
 		(stroke
@@ -4478,13 +4237,13 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 92.71) (xy 220.98 92.71)
+			(xy 205.74 57.15) (xy 205.74 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "79964b85-0a3f-4a5d-86ff-311bfd652a70")
+		(uuid "78f06ca3-4a57-46bc-ba71-30a06f5a695e")
 	)
 	(wire
 		(pts
@@ -4578,16 +4337,6 @@
 	)
 	(wire
 		(pts
-			(xy 16.51 88.9) (xy 17.78 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90b97bfd-ee91-418e-8081-ae208a0849a2")
-	)
-	(wire
-		(pts
 			(xy 180.34 111.76) (xy 180.34 127)
 		)
 		(stroke
@@ -4648,16 +4397,6 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 88.9) (xy 25.4 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1446163-5815-40b0-8999-4c8f86c164dc")
-	)
-	(wire
-		(pts
 			(xy 68.58 49.53) (xy 68.58 58.42)
 		)
 		(stroke
@@ -4705,16 +4444,6 @@
 			(type default)
 		)
 		(uuid "abf94418-860a-4c0b-bfbc-6cdf814b2811")
-	)
-	(wire
-		(pts
-			(xy 205.74 92.71) (xy 205.74 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aeba790a-5838-4e2e-ae32-1197522b1166")
 	)
 	(wire
 		(pts
@@ -4818,7 +4547,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 107.95) (xy 24.13 111.76)
+			(xy 24.13 100.33) (xy 24.13 111.76)
 		)
 		(stroke
 			(width 0)
@@ -4828,7 +4557,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 74.93) (xy 25.4 88.9)
+			(xy 25.4 74.93) (xy 25.4 100.33)
 		)
 		(stroke
 			(width 0)
@@ -4865,16 +4594,6 @@
 			(type default)
 		)
 		(uuid "d5f4d7cf-9d07-45a6-bf3a-d2229adb1b32")
-	)
-	(wire
-		(pts
-			(xy 205.74 97.79) (xy 205.74 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7b446c7-7482-40a0-80ee-7877e4c39de3")
 	)
 	(wire
 		(pts
@@ -4915,16 +4634,6 @@
 			(type default)
 		)
 		(uuid "db9eb823-cf4d-4ef3-a6a4-c0ee5941d996")
-	)
-	(wire
-		(pts
-			(xy 220.98 83.82) (xy 220.98 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "df8f5b2a-3daf-4e93-8a77-87c9736f6b86")
 	)
 	(wire
 		(pts
@@ -4975,16 +4684,6 @@
 			(type default)
 		)
 		(uuid "e7774909-3883-4c30-b569-17603a3f6bc1")
-	)
-	(wire
-		(pts
-			(xy 205.74 81.28) (xy 205.74 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e78bf15c-e226-4cf6-933d-8d60c53d8d5b")
 	)
 	(wire
 		(pts
@@ -5046,17 +4745,7 @@
 		)
 		(uuid "fff5f06b-40b6-4211-8645-36581ac4f2ff")
 	)
-	(text ".option reltol=1 abstol=100meg chgtol=1"
-		(exclude_from_sim no)
-		(at 239.776 135.636 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "61069270-07e5-492b-914c-9a50faf06308")
-	)
-	(text ".tran 1u 4m"
+	(text ".tran 1n 4u"
 		(exclude_from_sim no)
 		(at 337.312 162.56 0)
 		(effects
@@ -5132,28 +4821,6 @@
 			)
 		)
 	)
-	(global_label "U_einvco"
-		(shape input)
-		(at 205.74 57.15 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2fb95eaa-192b-4eda-89d6-586f49e714f5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 217.0709 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "U_REF"
 		(shape input)
 		(at 29.21 41.91 180)
@@ -5167,28 +4834,6 @@
 		(uuid "40c78aab-d348-4bb8-a573-13f351bd7476")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 20.4191 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "U_outvco"
-		(shape input)
-		(at 38.1 152.4 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "747b1719-092c-4293-b3c2-92af4e2c4601")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.5878 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6070,159 +5715,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 16.51 100.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "26c3a18a-7f69-4cfe-b181-6e7ae3e1a5b0")
-		(property "Reference" "#PWR016"
-			(at 16.51 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 16.51 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 16.51 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 16.51 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 16.51 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ea8ace61-2e6a-416b-b5b8-cd378f99253c")
-		)
-		(instances
-			(project "alleszussamen"
-				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 201.93 97.79 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2d816964-f548-40e0-b186-69c9dc8e45cf")
-		(property "Reference" "R15"
-			(at 201.93 91.44 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100k"
-			(at 201.93 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 201.93 96.012 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 201.93 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 201.93 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "R"
-			(at 236.855 17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=+ 2=-"
-			(at 236.855 17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e7fe7ff6-9c60-47e3-b674-b68d643d7c04")
-		)
-		(pin "1"
-			(uuid "1d6f4cd0-03c1-4385-8f5d-1dfdbad41f51")
-		)
-		(instances
-			(project "alleszussamen"
-				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
-					(reference "R15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Simulation_SPICE:VDC")
 		(at 317.5 209.55 0)
 		(unit 1)
@@ -6403,7 +5895,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "y1=0 y2=5 td=2n tr=2n tf=2n tw=500u per=1m"
+		(property "Sim.Params" "y1=0 y2=5 td=2n tr=2n tf=2n tw=50n per=100n"
 			(at 26.67 49.4002 0)
 			(effects
 				(font
@@ -8397,166 +7889,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 220.98 88.9 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "956daca0-a198-476b-8b83-8531f90795d2")
-		(property "Reference" "C3"
-			(at 224.79 87.6299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1p"
-			(at 224.79 90.1699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 220.0148 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 220.98 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 220.98 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "face1901-c37d-4284-bf0e-1b1e5d8937d4")
-		)
-		(pin "1"
-			(uuid "10f394e0-196b-4136-aa2f-811b5f11ac5d")
-		)
-		(instances
-			(project "alleszussamen"
-				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 220.98 80.01 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "977470ca-a682-43a5-8cbb-7c8f40338acd")
-		(property "Reference" "R16"
-			(at 218.44 78.7399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "52"
-			(at 218.44 81.2799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 219.202 80.01 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 220.98 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 220.98 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "R"
-			(at 140.97 45.085 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=+ 2=-"
-			(at 140.97 45.085 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "eae0d39c-b630-44ae-9979-1dd3b9375086")
-		)
-		(pin "1"
-			(uuid "64419b17-9f63-4248-8efa-02c8e0526593")
-		)
-		(instances
-			(project "alleszussamen"
-				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
-					(reference "R16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 80.01 111.76 270)
 		(mirror x)
@@ -8626,112 +7958,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:1N5819")
-		(at 205.74 85.09 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9eb74531-98f4-4342-85eb-644d07d733da")
-		(property "Reference" "D1"
-			(at 208.28 84.1374 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1N5819"
-			(at 208.28 86.6774 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 210.185 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf"
-			(at 205.74 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "40V 1A Schottky Barrier Rectifier Diode, DO-41"
-			(at 205.74 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "1n5819_spice.lib"
-			(at 205.74 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "1N5819"
-			(at 205.74 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 205.74 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 205.74 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f17447b7-3ada-4916-896c-2adf782c627d")
-		)
-		(pin "2"
-			(uuid "f4ed4d25-6539-439b-afc6-54dccfe9617e")
-		)
-		(instances
-			(project "alleszussamen"
-				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 307.34 149.86 0)
 		(unit 1)
@@ -8792,176 +8018,6 @@
 			(project "alleszussamen"
 				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
 					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N5819")
-		(at 20.32 100.33 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a5b0a631-3d64-493f-8f18-1cf34cfde94f")
-		(property "Reference" "D2"
-			(at 20.6375 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N5819"
-			(at 20.6375 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 20.32 95.885 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf"
-			(at 20.32 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "40V 1A Schottky Barrier Rectifier Diode, DO-41"
-			(at 20.32 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "1n5819_spice.lib"
-			(at 20.32 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "1N5819"
-			(at 20.32 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 20.32 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 20.32 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8846bb09-7e62-4400-9abe-a07ce94b4cbd")
-		)
-		(pin "2"
-			(uuid "358b797b-8b5e-47c7-b024-33e2fb96ca15")
-		)
-		(instances
-			(project "alleszussamen"
-				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 198.12 99.06 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "adb40883-3654-4d56-ba91-76da1bf6a937")
-		(property "Reference" "#PWR014"
-			(at 198.12 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 198.12 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 198.12 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 198.12 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 198.12 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dbddee81-82ac-4cf4-81e6-9fd5fa9154a3")
-		)
-		(instances
-			(project "alleszussamen"
-				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
-					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -9173,77 +8229,6 @@
 			(project "alleszussamen"
 				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 21.59 88.9 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b099f349-fba0-4a87-9396-54db384b4950")
-		(property "Reference" "C4"
-			(at 20.3199 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1p"
-			(at 22.8599 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 25.4 89.8652 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 21.59 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 21.59 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "841ef6c5-c571-47c5-bf53-26778e980e92")
-		)
-		(pin "1"
-			(uuid "75e50fc9-0d78-49b0-8b7a-7e6a31031b89")
-		)
-		(instances
-			(project "alleszussamen"
-				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
-					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -9534,7 +8519,7 @@
 			)
 		)
 		(property "Value" "39k"
-			(at 151.13 46.99 0)
+			(at 151.13 46.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9786,93 +8771,6 @@
 			(project "alleszussamen"
 				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
 					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 12.7 88.9 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bb78c198-d89d-4390-92c0-784d1310a697")
-		(property "Reference" "R17"
-			(at 12.7 82.55 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 12.7 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 12.7 90.678 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 12.7 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 12.7 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "R"
-			(at -22.225 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=+ 2=-"
-			(at -22.225 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "908c5b35-e62a-4a95-935b-161b397d0de7")
-		)
-		(pin "1"
-			(uuid "13623525-8667-4ef3-8625-a6ca58011e90")
-		)
-		(instances
-			(project "alleszussamen"
-				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
-					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -11146,95 +10044,6 @@
 			(project "alleszussamen"
 				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
 					(reference "V1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 24.13 104.14 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e9d9e9f3-4265-4a75-9e78-ceb86b160e91")
-		(property "Reference" "R14"
-			(at 26.67 102.8699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1500"
-			(at 26.67 105.4099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 25.908 104.14 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 24.13 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 24.13 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "R"
-			(at 104.14 139.065 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=+ 2=-"
-			(at 104.14 139.065 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a5d8cfaa-cd68-4cda-b120-b0ca5d34cd8b")
-		)
-		(pin "1"
-			(uuid "55970074-a5e2-47f0-85ab-a4d229066595")
-		)
-		(instances
-			(project "alleszussamen"
-				(path "/ccf7c749-da88-4aa6-a206-42a200d84737"
-					(reference "R14")
 					(unit 1)
 				)
 			)

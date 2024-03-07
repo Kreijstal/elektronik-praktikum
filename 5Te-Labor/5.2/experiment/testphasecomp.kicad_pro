@@ -1,29 +1,6 @@
 {
   "board": {
     "3dviewports": [],
-    "design_settings": {
-      "defaults": {
-        "board_outline_line_width": 0.1,
-        "copper_line_width": 0.2,
-        "copper_text_size_h": 1.5,
-        "copper_text_size_v": 1.5,
-        "copper_text_thickness": 0.3,
-        "other_line_width": 0.15,
-        "silk_line_width": 0.15,
-        "silk_text_size_h": 1.0,
-        "silk_text_size_v": 1.0,
-        "silk_text_thickness": 0.15
-      },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
-      "rules": {
-        "min_copper_edge_clearance": 0.0,
-        "solder_mask_clearance": 0.0,
-        "solder_mask_min_width": 0.0
-      },
-      "track_widths": [],
-      "via_dimensions": []
-    },
     "ipc2581": {
       "dist": "",
       "distpn": "",
@@ -254,7 +231,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "dreiecksrechteck-vco.kicad_pro",
+    "filename": "testphasecomp.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -271,9 +248,9 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 6
       }
     ],
@@ -387,7 +364,6 @@
     "net_format_name": "",
     "ngspice": {
       "fix_include_paths": true,
-      "fix_passive_vals": false,
       "meta": {
         "version": 0
       },
@@ -396,7 +372,6 @@
     },
     "page_layout_descr_file": "",
     "plot_directory": "",
-    "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -408,12 +383,8 @@
   },
   "sheets": [
     [
-      "2bfb4d56-aacb-4507-b57e-dbc901fa3ede",
-      "Root"
-    ],
-    [
-      "a87cc6be-1234-40f6-803d-735417fdea9f",
-      "pifilter"
+      "d3fa7aab-43b9-4a3d-8919-a6a395105479",
+      ""
     ]
   ],
   "text_variables": {}

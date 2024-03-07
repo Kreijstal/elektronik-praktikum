@@ -4,7 +4,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 10u 10m",
+        ".tran 50n 10m",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -21,13 +21,33 @@
       "showGrid": true,
       "traces": [
         {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(/phasekomp/U_REF)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(255, 127, 0)",
+          "signal": "V(/phasekomp/U_REF2)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(255, 255, 51)",
+          "signal": "V(/phasekomp/comp_out)",
+          "trace_type": 257
+        },
+        {
           "color": "rgb(55, 126, 184)",
-          "signal": "V(U_a)",
+          "signal": "V(qb)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(qbbar)",
           "trace_type": 257
         },
         {
           "color": "rgb(228, 26, 28)",
-          "signal": "V(U_o)",
+          "signal": "V(reset)",
           "trace_type": 257
         }
       ]

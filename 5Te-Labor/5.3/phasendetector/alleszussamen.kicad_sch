@@ -4932,17 +4932,6 @@
 		)
 		(uuid "fff5f06b-40b6-4211-8645-36581ac4f2ff")
 	)
-	(text ".tran 10u 10m\n"
-		(exclude_from_sim no)
-		(at 111.76 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "22895abb-3e52-425e-a8e1-069e03ead37a")
-	)
 	(text ".tran 1n 4u"
 		(exclude_from_sim no)
 		(at 337.312 162.56 0)

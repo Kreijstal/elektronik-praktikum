@@ -1,0 +1,41 @@
+% PI Filter
+
+%Integrator erweitert
+
+\documentclass{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+\begin{document}
+
+\begin{circuitikz}[european]
+    \ctikzset{bipoles/length=1cm}
+    
+    \draw
+    (0,0) node[op amp] (opamp) {};
+    
+    \draw (opamp.-) to[R, european resistor, l=$R_{11}$,a=\SI{39}{\kilo\ohm}] (-2, 0.35) -- (-3, 0.35) node[ocirc]{};
+    
+    \draw [-latex] ([yshift=-2mm] -3,0.35)--(-3,-1.35) node[midway,left] {$U_e$} ; 
+   
+ % Zeichne C   
+    \draw (opamp.-) to[short,*-] ++(0,1.25) coordinate (leftD) 
+    to[R, l=$R_{12}$,a=\SI{12}{\kilo\ohm}] (leftD -| opamp.out)  ;
+
+    \draw [-latex] ([yshift=-2mm] 3,0)--(3,-1.35) node[midway,left] {$U_a$}; 
+    
+    \draw (3,-1.45) node[ocirc]{} to(3,-1.5) node[ground]{};
+    \draw (-3,-1.45)node[ocirc]{}to(-3,-1.5) node[ground]{};
+
+   \draw (opamp.out)--(4,0) node[ocirc]{};
+% Zeichne R2
+   \draw (leftD -| opamp.out)  to[C, l=$C_2$,a=\SI{1}{\micro\farad}] (3,1.55)  to[short,-*] (3,0);
+
+    \draw (opamp.+) -- (-1,-0.35) to (-1,-1.5) node[ground]{};
+
+    
+\end{circuitikz}
+
+\end{document}
+

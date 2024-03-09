@@ -1,0 +1,72 @@
+%
+%
+%
+%--------------------------------------------------%
+%sw
+% Setup
+%
+\input{setup/0-0_Packages.tex}
+\input{setup/0-1_Meta.tex}
+\input{setup/0-2_Layout.tex}
+%
+%
+%
+%--------------------------------------------------%
+%
+% Document
+%
+\begin{document}
+%
+% Title Page
+%
+\input{setup/0-3_Title.tex}
+%
+% Table of Contents
+%
+\newpage
+\tableofcontents
+%
+% Declaration
+%
+\clearpage
+\input{setup/0-4_Eidesstattliche-Erklaerung.tex}
+%
+% Main Part
+%
+\clearpage
+\input{1_Einleitung.tex}
+%
+\clearpage
+\input{2_Durchfuehrung.tex}
+%
+\clearpage
+\input{3_Auswertung.tex}
+%
+\clearpage
+\input{4_Zusammenfassung.tex}
+%
+% List of Tables
+%
+%\clearpage
+%\listoftables
+%
+% List of Figures
+%
+\clearpage
+\listoffigures
+%
+% List of References
+%
+%\clearpage
+%\input{5_Quellen.tex}
+%
+% Appendices
+%
+\appendices
+\clearpage
+\printbibliography
+\clearpage
+\end{document}
+%
+%
+%

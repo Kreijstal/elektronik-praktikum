@@ -1,0 +1,114 @@
+%
+%
+%
+%--------------------------------------------------%
+%
+% Header and Footer
+%
+\usepackage[headsepline, footsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\normalfont}
+\setkomafont{pagefoot}{\normalfont}
+%
+\ihead[]{%
+
+}
+\chead[]{\courseshort\ \semestershort\\\eventtype\ \eventnumber}
+\ohead[]{\includegraphics[height = 12mm]{src/Logo_TUB_rot}}
+\ifoot[]{Fachgebiet \departmentshort}
+\cfoot[]{\thepage\ von \pageref*{LastPage}}
+\ofoot[]{}
+%
+%--------------------------------------------------%
+%
+% Numbering Tweaks
+%
+\renewcommand*\thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand*\thefigure{\arabic{section}.\arabic{figure}}
+\renewcommand*\thetable{\arabic{section}.\arabic{table}}
+%
+%--------------------------------------------------%
+%
+% Units
+%
+\DeclareSIUnit{\ah}{Ah}
+\DeclareSIUnit{\as}{As}
+\DeclareSIUnit{\wh}{Wh}
+\DeclareSIUnit{\ws}{Ws}
+%
+%--------------------------------------------------%
+%
+% Symbols
+%
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\newcommand{\diff}{\ensuremath{\mathrm{d}}}
+%
+%--------------------------------------------------%
+%
+% Colours
+%
+\definecolor{turot}  {RGB}{197,  14,  31}
+\definecolor{tublau} {RGB}{  0, 166, 179}
+\definecolor{tugrau} {RGB}{113, 113, 113}
+\definecolor{tugelb} {RGB}{255, 128,   0}
+\definecolor{tugruen}{RGB}{ 34, 161,  92}
+%
+%--------------------------------------------------%
+%
+% Circuit Element Tweaks
+%
+\tikzset
+{
+  resistor IEC graphic/.style =
+  {
+    circuit symbol open,
+    circuit symbol size = width 2.5 height 1,
+    shape = rectangle ee,
+    transform shape
+  },
+  var resistor IEC graphic/.style =
+  {
+    circuit symbol lines,
+    circuit symbol size = width 3.6 height 0.8,
+    shape = var resistor IEC,
+    transform shape,
+    outer sep = 0pt,
+    cap = round
+  },
+  inductor IEC graphic/.style =
+  {
+    circuit symbol lines,
+    circuit symbol size = width 3 height .5,
+    transform shape,
+    shape = inductor IEC,
+    outer sep = 0pt,
+    cap = round
+  },
+  var inductor IEC graphic/.style =
+  {
+    circuit symbol filled,
+    circuit symbol size = width 2.5 height 1
+    transform shape,
+    shape = rectangle ee
+  },
+  capacitor IEC graphic/.style =
+  {
+    circuit symbol lines,
+    circuit symbol size = width .5 height 1.5,
+    transform shape,
+    shape = capacitor IEC
+  }
+}
+%--------------------------------------------------%
+%
+% Arrows
+%
+\tikzset{
+	DickerPfeil/.style={ultra thick, shorten >=#1, shorten <=#1, -{Straight Barb[angle'=60, scale=1.5]}},
+	UPfeil/.style={blue, DickerPfeil=#1, font={\sffamily\itshape}},
+	IPfeil/.style={red, DickerPfeil=#1, font={\ttfamily\itshape}}
+}
+%
+%
+%

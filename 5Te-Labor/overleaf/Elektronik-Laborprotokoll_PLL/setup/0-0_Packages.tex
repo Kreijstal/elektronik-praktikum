@@ -1,0 +1,162 @@
+%
+%
+%
+%--------------------------------------------------%
+%
+% Document Settings
+%
+\documentclass[
+	paper = a4,
+	twoside,
+	fontsize = 12pt,
+	headsepline = .5pt,
+  headheight = 40pt,
+	numbers = noenddot,       % "1.1.1." --> "1.1.1"
+	parskip = half,           % Half-skip for paragraphs
+	titlepage = on,           % Use title page
+	captions = tableheading,  % Table headings
+	DIV = 12,
+	toc = bibliography,       % Include reference list in table of contents
+  listof = totoc
+]{scrartcl}
+%--------------------------------------------------%
+%
+% Language Settings
+%
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+%--------------------------------------------------%
+%
+% Packages for BibTex/Citations
+% -- Already loaded here to avoid conflicts between two certain packages.
+
+% Für Zitieren
+\usepackage{csquotes}
+\usepackage[backend=biber,
+style =numeric]{biblatex} %oder z.B. style=alphabetic
+\addbibresource{MyLibrary.bib}
+%
+%\usepackage[noadjust]{cite}
+%\usepackage[hyphens]{url}
+%\usepackage{etoolbox}
+%\apptocmd{\sloppy}{\hbadness 10000\relax}{}{} % Ignore boxes with too much whitespace in "sloppy" mode
+%--------------------------------------------------%
+%
+% Packages for Formulae
+%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[per-mode = symbol,
+            locale = DE,
+            range-phrase = ~...~,
+            range-units = brackets]{siunitx}
+\sisetup{output-decimal-marker = {,}, per-mode = fraction, fraction-function = \tfrac}
+\renewcommand{\theequation}{\arabic{section}.\arabic{subsection}}	    % Use exact section numbers in equation numbering
+\numberwithin{equation}{subsection}
+\numberwithin{figure}{subsection}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}  % Single equation number in "align*" environment
+\usepackage[]{listofsymbols}
+\usepackage{upgreek}
+\usepackage{chemmacros}
+%\chemsetup[redox]{pos = top,%
+ %                 explicit-sign = true,%
+  %                explicit-zero-sign = false,%
+   %               format = {\small},%
+    %              dist = 1em,%
+     %             sep = .5em}
+\usepackage{stackengine}
+%--------------------------------------------------%
+%
+% Packages for Source Code
+% -- Already loaded here to avoid conflicts between two certain packages.
+%
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{paralist}
+\usepackage[numbered, framed]{matlab-prettifier}
+\usepackage{tcolorbox}
+%\usepackage[dvipsnames]{xcolor}
+%--------------------------------------------------%
+%
+% Packages for Graphics/Figures
+%
+\usepackage{graphicx}
+\usepackage[labelsep = period]{caption}
+\graphicspath{../}
+\usepackage[subrefformat = parens,
+            labelformat = parens]{subcaption}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{picinpar}
+\usepackage[section]{placeins}
+%\usepackage{hyperref}					    % Is instead loaded at the end to avoid warning messages
+\usepackage{microtype}              % Improved text layout
+\usepackage{textcomp}               % Additional symbols in text mode
+\usepackage[format = hang]{caption}
+\pdfminorversion = 6
+\usepackage{pdfpages}
+%--------------------------------------------------%
+%
+% Packages for Circuits/Drawings
+%
+\usepackage{pgfplots}
+\pgfplotsset{compat = 1.13}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{matrix, shapes, arrows.meta, positioning, calc,arrows,decorations.markings}
+\usepackage{marvosym}
+\usepgfplotslibrary{groupplots, units}
+%--------------------------------------------------%
+%
+% Packages for Tables
+%
+\usepackage{array}
+\usepackage{tabularx}
+%\newcolumntype{w}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
+\usepackage{bigdelim} % Better formatting of cells
+\usepackage{multirow}
+\usepackage{booktabs} % Cleaner table layouts
+
+
+%--------------------------------------------------%
+%
+% Packages for Formatting
+%
+\usepackage{lastpage}                   % Allow reference to last page of the document
+\usepackage{enumitem}
+\usepackage{fancybox}
+\usepackage{ulem}
+\usepackage{setspace}
+\usepackage[a4paper,
+            lmargin = {25mm},
+            rmargin = {25mm},
+            tmargin = {30mm},
+            bmargin = {25mm}]{geometry}
+\addtolength{\footskip}{-0.8cm}         % Increase footer height to bring page numbering up
+\onehalfspacing
+\usepackage{tagging}                    % Include and exclude parts of the document via tags
+%--------------------------------------------------%
+%
+% Packages for Appendices
+%
+\usepackage[title, titletoc]{appendix}
+\usepackage{titletoc}
+%--------------------------------------------------%
+%
+% Finalisation
+%
+\usepackage{hyperref} % Load last to avoid warning messages (see comment above)
+%
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\renewcommand*\familydefault{\sfdefault} % Serif Font
+%

@@ -1,0 +1,320 @@
+\section{Notizen aus dem Labor}
+
+Hybrid..bauen wir digital-analog
+Oszillator--analog
+Phasendetektor--digital
+
+*Phasendetektor hat digitlae Zustände -1, 1 *
+
+
+Eingangsspannung von maximal 5 Volt
+Übertragungsfunktion davon
+H_VCO ist eine Konstante K_vco = delta f/ delta U_e
+*Je höher ist die eingangsspannng desto höher ist die Frequenz
+*Man erwartert einen linearen Verlauf. Aber mit derm echten (sch..ßen) OPV ist es nicht immer so.
+-->Protokoll--Bild, wie es 
+
+Phasendetektor
+
+D-FlipFlop
+******
+S-Pins auf Masse(Null) setzen. DAs benutzen wir nicht.
+D-Pins ist bei V_DD
+CLK ist für U_VCO
+Resert reagiert NUR auf ddie flankende Steigende
+
+Eingangssignale Kanal1 und Kanal2
+--Protokoll einmal Bild für VCO schneller,  einmal Bİld für VCO langsamaer ein Bild für Ausgangssignal 0
+
+Logik hat 3 Zustände  (1,-1,0) V_CC
+
+H_PD=K_Phasendetektor (Konstane)=/elta U_A /Delta phasemax
+
+
+
+VCO bauen 5Volt bitte nich 12Volt
+
+Phaendetetkror ----Singly supply
+(And Gatter)  (12Volt)
+
+
+Schleifenfilter
+Substrahierer ----- TL072 
+Double Supply
+
+
+
+
+
+
+oszilliert Kennlinie
+
+
+
+
+
+\Notizen zur Durchführung
+
+C0=Schutzkondensator VCc- Vcc+
+
+R_1 18k
+R_2= 27k
+
+R_3=820ohm
+C1=100nF Kondensatoeren
+
+4ist OPV Schmitt 1 ist OPV Integrator
+
+R3 zwischen 4OUT und 1IN-
+R1  4IN+ 1OUT 
+R2 4OUT 4IN+
+
+C1 1OUT 1In-
+
+gegeben: Der Basisvorwiderstand des Bipolartransistors. Nicht zu viel Strom in BAsis, trotzdem R6. Zu vile Strom alles kaputt. Zu wenig: Kollektro eMitter nicht groß genug. Eingangsspannung würde nicht gut weitergeleiete.
+
+R4=460Ohm 
+
+4OUT mit Mitte der Transistoren
+
+NPN-Transistor
+PNP Transistor
+
+Mitte verbunden
+--rechts unten in der Skizze-- invertierender Verstärker R5=R6= 1,2kOhm( für 1kOhm)
+
+2OUt 2IN- R5
+ 3+    2IN-     R6
+ 3- und 3out kurzschluss
+
+
+
+
+ 4mal 1k ohm für phasendetektor
+
+
+ 0Volt 3Hz --ZLeckströme
+ 0,5Volt  303Hz newfile1
+ 1Volt 581Hz      
+ 1,5   847Hz
+ 2     1,09kHz
+ 2,5  1,31kHz  nwfile5
+ 3  1,51kHz
+ 3,5    1,72kHz
+ 4   1.92 kHz
+ 4,5 1.92kHz
+ 5   1,72kHz nwwfilw10
+
+
+.csv
+
+65
+Bildoszilloskop
+
+Wenn Phase mher voneinander abweicht, umso größer wird der PWM
+Die Idee 
+
+U_max für positive
+10,7Volt...(e
+
+für negative -7,4Volt
+
+
+//Notizen 2.Teil
+
+
+
+PI Filter
+
+gerechnete Werte sind auf Papier, wie es zu rechnen war
+* Wir hatten Gott sei Dank 1 mikro Farad
+
+So folgt aus der rechnung: R1= 39kOhm
+R2= 12 kOhm
+
+
+
+
+100k benutzt
+1,5k benutzt
+
+
+PLL
+
+Wgen debugging Zielen wurde das PI Filter umgetauscht
+Siehe Bilder(WhatsAppGruppe)
+
+
+
+
+
+Gelb ist U_ref
+Blau PI Regler
+
+Frequenz ehöhe, blau ist höher, 
+
+Referenzssignal auf 0
+
+
+Sprungantworrt
+
+Wie sehen gelbe Signal das Rferenzsignal, der blaue Integrator steigt , Oszilliert selbst bisschen PI Filter, einraten ausrasten. Eİnges Ausrastvorgang
+
+Sprungantrort als osr.
+Butterworth Approximation, es gibt kaum Ğberschwingen. 
+
+R2= tauschen 100kOhm zu 1 kOhm
+
+Dämpfung soll geringer werrden
+Überschwingen zu sehen,
+Frequenz ausrechnen
+(Evt. 
+
+Sprungantwort(blaue) PI Fİlter plotten, das ist wichtig
+
+die Spannung am PI Fİlter reagiert
+
+
+Notizen zur Interpretation:
+
+Was habt ihr aufgebeuat
+Eİngangsgrößen
+
+Ausgangsgrößen
+Pllots
+
+Bauteile Berechnungen
+
+
+VCO augbeabut punktartig gemessen
+Frequenz Wertetabelle, Kennlinie
+
+Dimensionierung zu beschreiben
+Dimensionierung ds SchmittTriggers
+2/3VCO
+
+Dimensionierung d des Integrators(?)
+
+Ergebnisse
+Wertetabelle
+Richtige Kennlinie
+Ideale Kennlinie
+
+VCO muss simuliert werden
+Vergleichen
+
+Eine Regression an der Kennlinie (0-3,5)V
+
+Die Koeffizienten VCO
+
+Bild wo man Dreieck und Rechteck, als Beweis dass das VCO funktioniert
+
+
+Das Ding integriert DC voltage
+Dc rein integriert
+
+Phasendetektor
+
+Aufbau usw
+
+Eingangsseitigg Funktionsgenerator eingegeben, Ergebnisse
+Ein Bild, das Referenzsignal langsam, ein schneller
+
+HPD KPD berechnen
+
+Auch K_VCO Steilheit der Kennlinie, siehe Tafelbilder
+Grob erkläre ,wie ein Phasendetektor funktionieren, bisschen Theorie
+
+(Siehe Tafelbild in der 1. Woche)
+
+Schleifenfilter, PI Filter aufgebaut, Rechnungen, 
+D und w_n sind feste Werte
+D für Butterworth Faches  Ordnung
+Wn viel kleiner als 2000kHz damit wir kein Probleme bekommen
+
+R_1 und R_2 berechnen, erkläre genau Schritte
+Bodeplot analog 
+Simulation dazu
+
+Übertragungsfunkiton an der Tafel herleiten, wie man die Formeln für w_n T kommt von der Formel mMitte unten und oben 
+Omega n und d erklären
+
+PLL alles aufgebaut
+;Eingangssprung im fUnktionsgenerator, gucken ob einrastet
+Dimensionierung kommt vom vorherigen 
+Eingeschwungenen Referenzsignal
+Sprungantwort mithilfe des PI-Filters aufgebaut
+Sprungantwort mit varieierten PI Filter
+w_n ablesen können
+
+
+%Erwartungshorizont
+Was habt ihr aufgebeuat
+Eİngangsgrößen
+
+Ausgangsgrößen
+Pllots
+
+Bauteile Berechnungen
+
+
+VCO augbeabut punktartig gemessen
+Frequenz Wertetabelle, Kennlinie
+
+Dimensionierung zu beschreiben
+Dimensionierung ds SchmittTriggers
+2/3VCO
+
+Dimensionierung d des Integrators(?)
+
+Ergebnisse
+Wertetabelle
+Richtige Kennlinie
+Ideale Kennlinie
+
+VCO muss simuliert werden
+Vergleichen
+
+Eine Regression an der Kennlinie (0-3,5)V
+
+Die Koeffizienten VCO
+
+Bild wo man Dreieck und Rechteck, als Beweis dass das VCO funktioniert
+
+
+Das Ding integriert DC voltage
+Dc rein integriert
+
+Phasendetektor
+
+Aufbau usw
+
+Eingangsseitigg Funktionsgenerator eingegeben, Ergebnisse
+Ein Bild, das Referenzsignal langsam, ein schneller
+
+HPD KPD berechnen
+
+Auch K_VCO Steilheit der Kennlinie, siehe Tafelbilder
+Grob erkläre ,wie ein Phasendetektor funktionieren, bisschen Theorie
+
+(Siehe Tafelbild in der 1. Woche)
+
+Schleifenfilter, PI Filter aufgebaut, Rechnungen, 
+D und w_n sind feste Werte
+D für Butterworth Faches  Ordnung
+Wn viel kleiner als 2000kHz damit wir kein Probleme bekommen
+
+R_1 und R_2 berechnen, erkläre genau Schritte
+Bodeplot analog 
+Simulation dazu
+
+Übertragungsfunkiton an der Tafel herleiten, wie man die Formeln für w_n T kommt von der Formel mMitte unten und oben 
+Omega n und d erklären
+
+PLL alles aufgebaut
+;Eingangssprung im fUnktionsgenerator, gucken ob einrastet
+Dimensionierung kommt vom vorherigen 
+Eingeschwungenen Referenzsignal
+Sprungantwort mithilfe des PI-Filters aufgebaut
+Sprungantwort mit varieierten PI Filter
+w_n ablesen können
